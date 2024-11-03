@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script defer src="homepage.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="logo.png" alt="Get it Done Logo" class="header-logo">
+            </a>
+        </div>
+        <nav> 
+            <ul>
+                <li><a href="homepage.html">Beranda</a></li>
+                <li><a href="kalender.html">Kalender</a></li>
+                <li><a href="form_tugas.html">Buat Tugas</a></li>
+                <li><a href="tentang kami.html">Tentang Kami</a></li>
+                <li id="auth-section">
+                    <!-- Default Login Button -->
+                    <a href="#" id="login-link" class="login-button">Login</a>
+                    <!-- Profile and Logout Section -->
+                    <div id="profile-section" style="display: none;">
+                        <button id="logout-button">Logout</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Modal untuk Login -->
+     <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Masuk ke Akun Anda</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+                <button type="submit">Masuk</button>
+            </form>
+
+            <!-- Google Sign-In Button -->
+            <div class="g_id_signin" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-login_uri="" data-auto_prompt="false">
+            </div>
+
+            <p class="small-text">Belum punya akun? <a href="#">Daftar di sini</a></p>
+        </div>
+    </div>
+
+     <!-- Feedback message -->
+     <div id="textFeedbackBox" class="feedback-box"></div>
+
+    <!-- Main Content Placeholder -->
+    <main>
+        <!-- Content goes here -->
+    </main>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Raih Hari Anda, Raih Tujuan Anda</h2>
+        <p>Get it Done membantu Anda tetap teratur dan tepat waktu dalam menyelesaikan semua tugas, baik besar maupun kecil.</p>
+    </section>
+
+    <!-- Features Section -->
+<section id="features">
+    <h3>Fitur</h3>
+    <div class="feature">
+        <h4><a href="form_tugas.html">Manajemen Tugas yang Mudah</a></h4>
+        <p>Buat, atur, dan prioritaskan tugas dengan mudah dengan antarmuka kami yang mudah digunakan.</p>
+    </div>
+    <div class="feature">
+        <h4><a href="kalender.html">Kalender</a></h4>
+        <p>Dari tugas kecil hingga acara penting, Kalender Get it Done kami membantu Anda tetap terarah dan fokus dengan setiap tujuan yang ingin dicapai.</p>
+    </div>
+    <div class="feature">
+        <h4><a href="testimoni.html">Testimoni</a></h4>
+        <p>Temukan cerita-cerita inspiratif dan ulasan jujur tentang bagaimana aplikasi ini membantu mereka mengatur waktu, menyelesaikan tugas, dan mencapai tujuan mereka dengan lebih efisien.</p>
+    </div>
+</section>
+
+<style>
+    .feature h4 a {
+        text-decoration: none; 
+        color: inherit; 
+        transition: color 0.3s; 
+    }
+    
+    .feature h4 a:hover {
+        color: #525354; 
+    }
+    </style>
+
+<!-- About Us Section -->
+<section id="about-us">
+    <h4>Tentang Kami</h4>
+    <p>Selamat datang di Get it Done, solusi terbaik untuk membantu Anda tetap terorganisir dan produktif setiap hari. Platform kami dirancang untuk mempermudah pengelolaan waktu dan tugas Anda, dengan fitur-fitur lengkap seperti kalender terintegrasi yang memungkinkan Anda merencanakan kegiatan secara efisien.</p>
+    <a href="tentang kami.html" class="read-more-box">
+        <span class="read-more-text">Selengkapnya <span class="arrow">→</span></span>
+    </a>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Get it Done App. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

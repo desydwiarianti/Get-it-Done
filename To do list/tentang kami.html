@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - About Us & Meet Our Team</title>
+    <link rel="stylesheet" href="tentang kami.css">
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <a href="homepage.html">
+            <img src="logo.png" alt="Get it Done Logo" class="header-logo">
+        </a>
+        </div>
+    <nav> 
+        <ul>
+            <li><a href="homepage.html">Beranda</a></li>
+            <li><a href="kalender.html">Kalender</a></li>
+            <li><a href="form_tugas.html">Buat Tugas</a></li>
+            <li><a href="tentang kami.html">Tentang Kami</a></li>
+            <li id="auth-section">
+                <!-- Default Login Button -->
+                <a href="#" id="login-link" class="login-button">Login</a>
+                <!-- Profile and Logout Section -->
+                <div id="profile-section" style="display: none;">
+                    <button id="logout-button">Logout</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+ <!-- Modal untuk Login -->
+ <div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Masuk ke Akun Anda</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+            <button type="submit">Masuk</button>
+        </form>
+
+        <!-- Google Sign-In Button -->
+        <div class="g_id_signin" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-login_uri="" data-auto_prompt="false">
+        </div>
+
+        <p class="small-text">Belum punya akun? <a href="#">Daftar di sini</a></p>
+    </div>
+</div>
+
+ <!-- Feedback message -->
+ <div id="textFeedbackBox" class="feedback-box"></div>
+
+<!-- Main Content Placeholder -->
+<main>
+    <!-- Content goes here -->
+</main>
+
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <h1 class="about-title">Tentang Kami</h1>
+        <h2 class="brand-name">Get it Done</h2>
+        <p class="about-description">
+            Selamat datang di Get it Done, solusi terbaik untuk membantu Anda tetap terorganisir dan produktif setiap hari. Platform kami dirancang untuk mempermudah pengelolaan waktu dan tugas Anda, dengan fitur-fitur lengkap seperti kalender terintegrasi yang memungkinkan Anda merencanakan kegiatan secara efisien. Selain itu, Anda dapat dengan mudah membuat daftar tugas, mengatur prioritas, dan mengelompokkan pekerjaan sesuai kebutuhan. Kami mengutamakan kemudahan penggunaan, sehingga Anda bisa fokus pada hal-hal yang penting tanpa repot mengatur jadwal.
+        </p>
+        <p class="about-description">
+            Get it Done juga dilengkapi dengan fitur pengingat dan notifikasi otomatis yang memastikan Anda tidak melewatkan tenggat waktu atau pertemuan penting. Baik Anda mengelola tugas sehari-hari, proyek kerja, atau acara spesial, kami hadir untuk membantu Anda mengelola semuanya secara efisien. Kami percaya bahwa pengaturan waktu yang efektif adalah kunci keberhasilan, dan kami berkomitmen untuk memberikan pengalaman yang nyaman dan mendukung gaya hidup Anda yang sibuk.
+        </p>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="team-section">
+        <h1 class="section-title">Tim Get it Done</h1>
+        <div class="tab-menu">
+            <button class="tab active" onclick="showTab('leadership')">Project Manager</button>
+            <button class="tab" onclick="showTab('client-services')">UI/UX Designer</button>
+            <button class="tab" onclick="showTab('creative')">Front-End Developer</button>
+            <button class="tab" onclick="showTab('creative')">Back-End Developer</button>
+        </div>
+        <div class="team-members" id="leadership">
+            <div class="team-member">
+                <img src="3x4 Angel.jpg" alt="Mutiara">
+                <h3>Mutiara Angelita</h3>
+                <p>Project Manager</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Get it Done App. All rights reserved.</p>
+    </footer>
+
+    <script src="tentang kami.js"></script>
+</body>
+</html>

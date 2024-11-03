@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Tugas Baru</title>
+    <link rel="stylesheet" href="form_tugas.css">
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="logo"></div>
+            <a href="homepage.html">
+                <img src="logo.png" alt="Get it Done Logo" class="header-logo">
+            </a>
+            </div>
+        <nav> 
+            <ul>
+                <li><a href="homepage.html">Beranda</a></li>
+                <li><a href="kalender.html">Kalender</a></li>
+                <li><a href="form_tugas.html">Buat Tugas</a></li>
+                <li><a href="tentang kami.html">Tentang Kami</a></li>
+                <li id="auth-section">
+                    <!-- Default Login Button -->
+                    <a href="#" id="login-link" class="login-button">Login</a>
+                    <!-- Profile and Logout Section -->
+                    <div id="profile-section" style="display: none;">
+                        <button id="logout-button">Logout</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Modal untuk Login -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Masuk ke Akun Anda</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+                <button type="submit">Masuk</button>
+            </form>
+
+            <!-- Google Sign-In Button -->
+            <div class="g_id_signin" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-login_uri="" data-auto_prompt="false">
+            </div>
+
+            <p class="small-text">Belum punya akun? <a href="#">Daftar di sini</a></p>
+        </div>
+    </div>
+
+     <!-- Feedback message -->
+     <div id="textFeedbackBox" class="feedback-box"></div>
+
+    <!-- Main Content Placeholder -->
+    <main>
+        <!-- Content goes here -->
+    </main>
+
+    <div class="container">
+            <h1>Buat Tugas Baru</h1>
+        <form class="task-form">
+            <label for="task-name">Nama</label>
+            <input type="text" id="task-name" placeholder="Nama Tugas">
+            
+            <label for="task-date">Tanggal</label>
+            <input type="date" id="task-date">
+
+            <label for="task-start-time">Waktu Mulai</label>
+            <input type="time" id="task-start-time">
+            
+            <label for="task-end-time">Waktu Selesai</label>
+            <input type="time" id="task-end-time">
+
+            <div class="remind-me">
+                <label for="remind-toggle">Ingatkan saya</label>
+                <input type="checkbox" id="remind-toggle" checked>
+            </div>
+
+            <label>Kategori</label>
+            <div class="category-tags">
+                <select id="category-select">
+                    <option value="Belajar">Belajar</option>
+                    <option value="Produktif">Rapat</option>
+                    <option value="Rapat">Olahraga</option>
+                    <option value="Rapat">Acara Keluarga</option>
+                </select>
+                <button type="button" class="add-tag" onclick="openPopup()">+ Tambah Kategori</button>
+            </div>
+
+            <button type="button" class="create-task-btn" onclick="saveTask()">Buat Tugas</button>
+        </form>
+    </div>
+
+    <!-- Popup untuk menambahkan kategori baru -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Tambahkan kategori baru</h2>
+            <input type="text" id="new-category" placeholder="Nama kategori baru">
+            <button type="button" onclick="addCategory()">Tambah</button>
+            <button type="button" onclick="closePopup()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Pesan sukses -->
+    <div class="success-message" id="success-message">
+        Tugas sukses disimpan!
+    </div>
+
+     <!-- Footer Section -->
+     <footer>
+        <p>&copy; 2024 Get it Done App. All rights reserved.</p>
+    </footer>
+
+
+    <script src="form_tugas.js"></script>
+</body>
+</html>

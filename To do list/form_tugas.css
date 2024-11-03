@@ -1,0 +1,518 @@
+/* Logo styling */
+.logo {
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    z-index: 101; 
+}
+
+.header-logo {
+    height: 300px; 
+    width: auto;
+    display: block;
+    margin-left: 20px;
+}
+
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #efcfc3;
+    color: rgb(0, 0, 0);
+    padding: 0 40px;    
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: none; 
+}
+
+/* Show modal when needed */
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #de9594;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #de9594;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.modal-content button[type="submit"] {
+    padding: 10px;
+    background-color: #efcfc3;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #de9594;
+}
+
+.modal-content .small-text {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.modal-content .small-text a {
+    color: #de9594;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-content .small-text a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the Logout Button */
+#auth-section {
+    display: flex;
+    align-items: center;
+}
+
+#logout-button {
+    background-color: #c87a7a;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logout-button:hover {
+    background-color: #b36a6a;
+}
+
+/* Hero Section Styling */
+#hero {
+    background-color: #de9594;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #efcfc3;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #f1f1f1;
+}
+
+
+nav {
+    margin-left: auto; 
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .header-logo {
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+
+* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        -45deg, 
+        #f9d5e5,
+        #de9594,
+        #c0b9b6,
+        #969395
+    );
+    background-size: 400% 400%;
+    animation: gradient-background 15s ease infinite;
+}
+
+@keyframes gradient-background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Features Section Styling */
+#features {
+    padding: 40px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 15000px;
+    margin: 0 auto;
+}
+
+.feature {
+    background-color: #de9594;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 32%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#features h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.feature h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Button Styling */
+.button {
+    background-color: #efcfc3;
+    color: #000000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Container Styling */
+.container {
+    padding: 25px;    
+    background: linear-gradient(135deg, #f9d5e5, #de9594);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 100px auto 80px auto;
+    transition: transform 0.3s ease;
+    width: 500px;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.container .form-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.container .form-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Form Styling */
+.task-form label {
+    display: block;
+    font-size: 14px;
+    color: #000000;
+    margin: 10px 0 5px;
+}
+
+.task-form input[type="text"],
+.task-form input[type="date"],
+.task-form input[type="time"],
+.task-form select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5);    
+    background-color: rgba(255, 255, 255, 0.9);   
+    border-radius: 10px;    
+    font-size: 16px;    
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Remind Me Toggle */
+.remind-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.remind-me label {
+    font-size: 16px;
+    color: #333;
+}
+
+.remind-me input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+.remind-me input[type="checkbox"]:checked {
+    background-color: #5a8ff1;
+}
+
+.remind-me input[type="checkbox"]:checked::before {
+    left: 20px;
+}
+
+.remind-me input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+}
+
+/* Category Tags */
+.category-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.add-tag {
+    font-size: 14px;
+    color: #5a8ff1;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.create-task-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4f62d9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    background-color: #de9594;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #efcfc3;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni - Get It Done</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="testimoni.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="logo.png" alt="Get it Done Logo" class="header-logo">
+            </a>
+        </div>
+        <nav> 
+            <ul>
+                <li><a href="homepage.html">Beranda</a></li>
+                <li><a href="kalender.html">Kalender</a></li>
+                <li><a href="form_tugas.html">Buat Tugas</a></li>
+                <li><a href="tentang kami.html">Tentang Kami</a></li>
+                <li id="auth-section">
+                    <!-- Default Login Button -->
+                    <a href="#" id="login-link" class="login-button">Login</a>
+                    <!-- Profile and Logout Section -->
+                    <div id="profile-section" style="display: none;">
+                        <button id="logout-button">Logout</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Modal untuk Login -->
+     <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Masuk ke Akun Anda</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+                <button type="submit">Masuk</button>
+            </form>
+
+            <!-- Google Sign-In Button -->
+            <div class="g_id_signin" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-login_uri="" data-auto_prompt="false">
+            </div>
+
+            <p class="small-text">Belum punya akun? <a href="#">Daftar di sini</a></p>
+        </div>
+    </div>
+
+     <!-- Feedback message -->
+     <div id="textFeedbackBox" class="feedback-box"></div>
+
+    <!-- Main Content Placeholder -->
+    <main>
+        <!-- Content goes here -->
+    </main>
+    <!-- Form Testimoni -->
+    <div class="testimonial-form-container">
+        <h1>Tambahkan Testimoni Anda</h1>
+        <form id="testimonialForm" class="testimonial-form">
+            <div class="drag-drop-area" id="dragDropArea">
+                <div class="drag-drop-text">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop foto Anda di sini</p>
+                    <p>atau</p>
+                    <label for="fileInput" class="file-input-label">Pilih File</label>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                <img id="previewImage" class="preview-image" src="" alt="">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="testimonial">Testimoni:</label>
+                <textarea id="testimonial" name="testimonial" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Kirim Testimoni</button>
+        </form>
+    </div>
+
+    <!-- Tampilan Testimoni -->
+    <!-- Display Section -->
+<h1 class="section-title">Testimoni Pengguna</h1>
+<div id="testimonialsContainer"></div>
+    <!-- testimonials content -->
+</div>
+
+ <!-- Footer Section -->
+ <footer>
+    <p>&copy; 2024 Get it Done App. All rights reserved.</p>
+</footer>
+
+    <script src="testimoni.js"></script>
+</body>
+</html>
